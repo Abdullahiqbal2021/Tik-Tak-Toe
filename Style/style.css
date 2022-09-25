@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background: rgb(230, 230, 230);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  position: relative;
+  margin: 20px;
+  padding: 2vw 1vw;
+}
+
+.box {
+  border: 1.5px solid black;
+  background: radial-gradient(yellow, orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7vw;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: radial-gradient(rgb(230, 230, 5), orange);
+
+}
+
+.line {
+  height: 4px;
+  width: 0;
+  transition: 0.5s;
+  background-color: orange;
+  border: 1px solid rgb(155, 101, 2);
+  position: absolute;
+}
+
+.container-2 {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+img {
+  width: 0vw;
+  margin: 5px 0px;
+}
+
+button {
+  background: linear-gradient(orange, yellow, orange);
+  padding: 3px 10px;
+  border-radius: 13px;
+  font-size: 20px;
+  border: 2px solid rgb(179, 116, 0);
+  margin: 6px 2px;
+}
+
+button:active {
+  background: linear-gradient(rgb(211, 140, 8), yellow, rgb(230, 150, 2));
+}
+
+
+
+@media screen and (max-width:500px) {
+
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-2 {
+    justify-content: center;
+    align-items: center;
+  }
+}
