@@ -26,7 +26,7 @@ const checkWin = () => {
       document.getElementsByClassName("info")[0].innerHTML = boxText[e[0]].innerHTML + " won";
       document.getElementsByClassName("line")[0].style.width = `${e[6]}vw`
       document.getElementsByClassName("line")[0].style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`
-      document.getElementsByTagName("img")[0].style.width = "15vw";
+      document.getElementsByClassName("info")[0].classList.add("font-large")
     }
   })
   if (gameOver) {
@@ -71,8 +71,6 @@ function resetGame() {
     turn = "X"
     gameOver = false
     document.getElementsByClassName("line")[0].style.width = "0vw";
-    document.getElementsByTagName("img")[0].style.width = "0vw";
-
     document.getElementsByClassName('info')[0].innerHTML = "Turn for " + turn;
 
   })
